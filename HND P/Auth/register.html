@@ -1,0 +1,55 @@
+<?php
+session_start();
+include "../config/db.php";
+
+if(isset($_POST['register'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    mysqli_query($conn, "INSERT INTO users(name,email,password) VALUES('$name','$email','$password')");
+    echo "Registration successful";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration | CleanCity</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<div class="register-wrapper">
+
+    <div class="register-card">
+        <div class="icon">♻</div>
+
+        <h2>User Registration</h2>
+        <p>Create your account</p>
+
+        <form method="POST">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Enter your full name" required>
+
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Create a password" required>
+
+            <button type="submit" name="register">Register</button>
+        </form>
+
+        <div class="login-link">
+            Already have an account?
+            <a href="login.php">Login</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+

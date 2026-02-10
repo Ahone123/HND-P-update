@@ -1,0 +1,48 @@
+<?php
+include "../config/db.php";
+$id = $_GET['id'];
+
+if(isset($_POST['complete'])){
+    $img = $_FILES['after']['name'];
+    move_uploaded_file($_FILES['after']['tmp_name'],
+        "../uploads/after/".$img);
+
+    mysqli_query($conn,
+        "UPDATE reports SET status='Completed', after_image='$img'
+         WHERE id='$id'"
+    );
+
+    echo "Report completed";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assign_driver.css">
+</head>
+<body>
+    <div class="assign-box">
+    <h2>Assign Driver</h2>
+
+    <div class="report-info">
+        <p><strong>Location:</strong> Melen, Yaoundé</p>
+        <p><strong>Status:</strong> Pending</p>
+    </div>
+
+    <form method="POST">
+        <label>Select Driver</label>
+        <select>
+            <option>Driver A</option>
+            <option>Driver B</option>
+        </select>
+
+        <button type="submit">Assign Driver</button>
+    </form>
+</div>
+
+</body>
+</html>

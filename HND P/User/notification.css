@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 450px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.notification span {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.success {
+    background: #eafaf1;
+}
+
+.info {
+    background: #eef6fb;
+}
+
+.warning {
+    background: #fff4e5;
+}

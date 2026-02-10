@@ -1,0 +1,81 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f3f4f6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+.container {
+    background: white;
+    width: 420px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.container h1 {
+    font-size: 28px;
+    color: #22c55e;
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Menu list */
+.container ul {
+    list-style: none;
+}
+
+.container ul li {
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.container ul li a {
+    display: block;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.container ul li a:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* Logout button */
+.container ul li:last-child a {
+    background: #ef4444;
+}
+
+.container ul li:last-child a:hover {
+    background: #dc2626;
+}
+
+/* Mobile responsive */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+}

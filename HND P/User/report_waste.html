@@ -1,0 +1,53 @@
+<?php
+session_start();
+include "../config/db.php";
+
+if(isset($_POST['submit'])){
+    $desc = $_POST['description'];
+    $img = $_FILES['image']['name'];
+    $tmp = $_FILES['image']['tmp_name'];
+
+    move_uploaded_file($tmp, "../uploads/before/".$img);
+
+    mysqli_query($conn,
+        "INSERT INTO reports(user_id, description, before_image)
+         VALUES('{$_SESSION['user_id']','$desc','$img')"
+    );
+
+    echo "Report submitted successfully";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Waste | CleanCity</title>
+    <link rel="stylesheet" href="report_waste.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Report Waste</h1>
+    <p>Please provide details of the waste in your area</p>
+
+    <form class="report-form" method="post" enctype="multipart/form-data">
+
+     <label>Upload Waste Image</label>
+        <input type="file" required>
+
+        <label>Description</label>
+        <textarea placeholder="Describe the waste situation..." required></textarea>
+
+       
+        <button type="submit">Submit Report</button>
+
+    </form>
+    <a href="../Admin/assign_driver.html"></a>
+
+</div>
+
+</body>
+</html>
+

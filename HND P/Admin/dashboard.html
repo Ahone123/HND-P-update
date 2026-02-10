@@ -1,0 +1,98 @@
+<!-- <?php
+$adminName = "Admin";
+
+$stats = [
+    "Total Reports" => 120,
+    "Pending Reports" => 15,
+    "Validated" => 65,
+    "Assigned Tasks" => 10
+];
+
+$recentReports = [
+    ["id" => "0001", "user" => "Mary Anne", "status" => "Pending"],
+    ["id" => "0002", "user" => "John Paul", "status" => "Completed"],
+    ["id" => "0003", "user" => "Alice", "status" => "Pending"],
+];
+?> -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h2>Admin dashboard</h2>
+            <ul>
+                <div class="btns">
+                    <li>Home</li>
+                </div>
+                <br>
+                <div class="btns">
+                    <li class="active">Report</li>
+                </div>
+                <br>
+                <div class="btns">
+                    <li>Assignments</li>
+                </div>
+                <br>
+                <div class="btns">
+                    <li>Logout</li>
+                </div>
+
+            </ul>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main">
+            <div class="top-bar">
+                <h1>Dashboard</h1>
+                <div class="admin">Admin</div>
+            </div>
+
+            <!-- STATS -->
+            <div class="cards">
+                <div class="card">Total Reports<br><strong>120</strong></div>
+                <div class="card">Pending Reports<br><strong>15</strong></div>
+                <div class="card">Validated<br><strong>65</strong></div>
+                <div class="card">Assigned Tasks<br><strong>10</strong></div>
+            </div>
+
+            <!-- RECENT REPORTS -->
+            <div class="reports">
+                <h3>Recent Reports</h3>
+                <table>
+                    <tr>
+                        <th>Report ID</th>
+                        <th>User</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>0001</td>
+                        <td>Mary Anne</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>0002</td>
+                        <td>John Paul</td>
+                        <td>Completed</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <a href="./assign_driver.html"></a>
+    <a href="../Auth/logout.html"></a>
+
+</body>
+
+</html>

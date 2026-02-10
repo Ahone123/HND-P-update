@@ -1,0 +1,63 @@
+<?php
+session_start();
+include "../config/db.php";
+
+$report_id = $_GET['report_id'];
+$amount = 2000; // example amount in FCFA
+
+if (isset($_POST['pay'])) {
+
+    mysqli_query($conn,
+        "INSERT INTO payments (report_id, amount, status)
+         VALUES ('$report_id', '$amount', 'Paid')"
+    );
+
+    echo "<script>alert('Payment successful');</script>";
+}
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+
+    <div class="payment-box">
+        <h2>Waste Collection Payment</h2>
+
+        <p class="amount">
+            Amount: <span>2000 FCFA</span>
+        </p>
+
+        <form method="POST">
+            <label>Payment Method</label>
+            <select required>
+                <option>Mobile Money</option>
+                <option>Cash</option>
+            </select>
+
+            <!-- PAYMENT POPUP -->
+            <div class="modal" id="paymentModal">
+                <div class="modal-content">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalMessage"></p>
+                    <button onclick="closeModal()">OK</button>
+                </div>
+            </div>
+            <br>
+            <button type="button" onclick="makePayment()">Pay Now</button>
+
+        </form>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

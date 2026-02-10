@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(imgg/garbage-waste-recycle-process-design-concept-illustration-vector.jpg);
+    color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+}
+
+.login-btn {
+    padding: 8px 16px;
+    background: #f2f2f2;
+    border-radius: 6px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.primary {
+    background: #1f8f3a;
+    color: white;
+}
+
+.secondary {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.hero-image img {
+    width: 400px;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 60px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

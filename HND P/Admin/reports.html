@@ -1,0 +1,58 @@
+<?php
+include "../config/db.php";
+$result = mysqli_query($conn, "SELECT reports.*, users.name FROM reports
+JOIN users ON reports.user_id = users.id");
+?>
+
+<table>
+<tr>
+<th>Report ID</th>
+<th>User</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+<?php while($row = mysqli_fetch_assoc($result)){ ?>
+<tr>
+<td><?= $row['id'] ?></td>
+<td><?= $row['name'] ?></td>
+<td><?= $row['status'] ?></td>
+<td><a href="assign_driver.php?id=<?= $row['id'] ?>">View</a></td>
+</tr>
+<?php } ?>
+</table>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h2>All Waste Reports</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <?php while($row = mysqli_fetch_assoc($result)){ ?>
+        <tr>
+            <td><?= $row['id'] ?></td>
+            <td><?= $row['name'] ?></td>
+            <td><?= $row['status'] ?></td>
+            <td>
+                <?php if($row['status'] != 'Completed'){ ?>
+                    <a href="assign_driver.php?id=<?= $row['id'] ?>">Assign / Complete</a>
+                <?php } else { echo 'Completed'; } ?>
+            </td>
+        </tr>
+        <?php } ?>
+    </table>
+</div>
+
+</body>
+</html>
