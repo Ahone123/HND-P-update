@@ -1,0 +1,246 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+nav{
+    background:#1db954;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:rgb(19, 17, 17);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav h1{
+    font-size:22px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li a{
+    color:rgb(29, 26, 26);
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    text-decoration:underline;
+}
+
+/* HERO SECTION */
+.hero{
+    height:60vh;
+    background: url('imgg/garbage-waste-recycle-process-design-concept-illustration-vector.jpg') no-repeat center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    position: relative;
+    margin-top:60px; /* compensate for fixed nav */
+}
+
+.hero::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-text{
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    width:70%;
+    margin-bottom:20px;
+}
+
+.btn{
+    padding:12px 25px;
+    border:none;
+    background:#1db954;
+    color:rgb(24, 22, 22);
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+    margin:5px;
+}
+
+.btn:hover{
+    background:#159743;
+}
+
+/* SECTIONS */
+.section{
+    padding:60px 80px;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* FEATURES */
+.features{
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+
+.feature{
+    width:22%;
+}
+
+/* CONTACT */
+.container{
+    width:70%;
+    margin:auto;
+    line-height:1.8;
+    background: rgba(255,255,255,0.95);
+    padding: 80px 30px 40px; /* extra top for nav */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* feedback messages */
+.success {
+    color: #155724;
+    background: #d4edda;
+    padding: 10px 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.error {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 10px 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* CONTACT FORM */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+footer{
+    background:#1db954;
+    color:rgb(34, 32, 32);
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+/* TABLETS */
+@media (max-width: 992px){
+
+    nav{
+        padding:15px 30px;
+    }
+
+    .hero h2{
+        font-size:32px;
+    }
+
+    .hero p{
+        width:80%;
+    }
+
+    .section{
+        padding:50px 40px;
+    }
+
+    .container{
+        width:85%;
+    }
+
+    .features{
+        flex-direction:column;
+        gap:20px;
+        align-items:center;
+    }
+
+    .feature{
+        width:80%;
+    }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 600px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero{
+        height:auto;
+        padding:60px 20px;
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .hero p{
+        width:100%;
+        font-size:16px;
+    }
+
+    .section{
+        padding:40px 20px;
+    }
+
+    .feature{
+        width:100%;
+    }
+
+    .container{
+        width:95%;
+    }
+
+    footer{
+        font-size:14px;
+    }
+}
+
+

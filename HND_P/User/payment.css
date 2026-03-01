@@ -1,0 +1,147 @@
+/* body {
+    background-color: #f4f9f6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.payment-box {
+    width: 400px;
+    margin: 100px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.payment-box h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.amount {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.amount span {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.payment-box label {
+    font-weight: bold;
+}
+
+.payment-box select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.payment-box button {
+    width: 100%;
+    padding: 10px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-box button:hover {
+    background: #256628;
+} */
+
+
+/* Center the payment content */
+.main-content {
+    padding: 40px;
+    background: #f7f7f7;
+    min-height: 100vh;
+}
+
+/* Payment Card */
+.payment-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+.payment-container h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.payment-container h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Payment Info Text */
+.payment-info {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Amount Box */
+.amount-box {
+    background: #eafaf1;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+/* Payment Methods */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.method-option {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.method-option:hover {
+    border-color: #2ecc71;
+    background: #f4fff8;
+}
+
+.method-option input {
+    margin-right: 8px;
+    accent-color: #2ecc71;
+}
+
+/* Pay Button */
+.pay-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #2ecc71;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.pay-btn:hover {
+    background: #27ae60;
+}

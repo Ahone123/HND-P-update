@@ -1,0 +1,112 @@
+/* basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    line-height: 1.5;
+}
+
+.topbar {
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.notification {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.notification span {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.notification p {
+    margin: 5px 0;
+}
+
+.notification .time {
+    font-size: 0.8rem;
+    color: #666;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.success {
+    background: #eafaf1;
+    border-left: 4px solid #28a745;
+}
+
+.info {
+    background: #eef6fb;
+    border-left: 4px solid #17a2b8;
+}
+
+.warning {
+    background: #fff4e5;
+    border-left: 4px solid #ffc107;
+}
+
+.error {
+    background: #fdecea;
+    border-left: 4px solid #dc3545;
+}
+
+.no-notifications {
+    text-align: center;
+    padding: 40px 0;
+    color: #777;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .notification {
+        padding: 12px 15px;
+    }
+
+    .notification .time {
+        font-size: 0.75rem;
+        right: 10px;
+        top: 8px;
+    }
+}
+
+
